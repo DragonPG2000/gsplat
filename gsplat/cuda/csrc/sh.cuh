@@ -1,6 +1,6 @@
 #include <cuda_runtime.h>
 #include <cooperative_groups.h>
-#define CHANNELS 3
+#define CHANNELS 141
 namespace cg = cooperative_groups;
 
 enum class SHType {
