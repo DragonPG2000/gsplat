@@ -70,10 +70,10 @@ torch::Tensor compute_sh_forward_tensor(
     DEVICE_GUARD(viewdirs);
     unsigned num_bases = num_sh_bases(degree);
     if (coeffs.ndimension() != 3 || coeffs.size(0) != num_points ||
-        coeffs.size(1) != num_bases || coeffs.size(2) != 3) {
-        AT_ERROR("coeffs must have dimensions (N, D, 3)");
+        coeffs.size(1) != num_bases || coeffs.size(2) != 141) {
+        AT_ERROR("coeffs must have dimensions (N, D, 141)");
     }
-    torch::Tensor colors = torch::empty({num_points, 3}, coeffs.options());    
+    torch::Tensor colors = torch::empty({num_points, 141}, coeffs.options());    
     if (method == "poly") {
         compute_sh_forward_kernel<SHType::Poly><<<
             (num_points + N_THREADS - 1) / N_THREADS,
