@@ -444,7 +444,7 @@ __global__ void compute_sh_forward_kernel(
     if (idx >= num_points) {
         return;
     }
-    const unsigned num_channels = 3;
+    const unsigned num_channels = 141;
     unsigned num_bases = num_sh_bases(degree);
     unsigned idx_sh = num_bases * num_channels * idx;
     unsigned idx_col = num_channels * idx;
@@ -477,7 +477,7 @@ __global__ void compute_sh_backward_kernel(
     if (idx >= num_points) {
         return;
     }
-    const unsigned num_channels = 3;
+    const unsigned num_channels = 141;
     unsigned num_bases = num_sh_bases(degree);
     unsigned idx_sh = num_bases * num_channels * idx;
     unsigned idx_col = num_channels * idx;
