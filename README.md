@@ -23,6 +23,12 @@ A full evalaution of Nerfstudio's implementation of Gaussian Splatting against t
 
 The easist way is to install from PyPI. In this way it will build the CUDA code **on the first run** (JIT).
 
+If you're using CPU run 
+
+```bash
+export TORCH_CUDA_ARCH_LIST="8.6"  # Set the CUDA architecture list
+```
+
 ```bash
 pip install gsplat
 ```
