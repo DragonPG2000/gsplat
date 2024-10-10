@@ -88,7 +88,7 @@ class _SphericalHarmonics(Function):
         )
 
     @staticmethod
-    def backward(ctx, v_colors: Float[Tensor, "*batch 3"]):
+    def backward(ctx, v_colors: Float[Tensor, "*batch 141"]):
         degrees_to_use = ctx.degrees_to_use
         degree = ctx.degree
         method = ctx.method
