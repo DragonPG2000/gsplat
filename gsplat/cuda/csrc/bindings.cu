@@ -116,7 +116,7 @@ torch::Tensor compute_sh_backward_tensor(
         AT_ERROR("viewdirs must have dimensions (N, 3)");
     }
     if (v_colors.ndimension() != 2 || v_colors.size(0) != num_points ||
-        v_colors.size(1) != 3) {
+        v_colors.size(1) != 141) {
         AT_ERROR("v_colors must have dimensions (N, 3)");
     }
     unsigned num_bases = num_sh_bases(degree);
