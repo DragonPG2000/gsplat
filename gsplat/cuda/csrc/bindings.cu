@@ -121,7 +121,7 @@ torch::Tensor compute_sh_backward_tensor(
     }
     unsigned num_bases = num_sh_bases(degree);
     torch::Tensor v_coeffs =
-        torch::zeros({num_points, num_bases, 3}, v_colors.options());
+        torch::zeros({num_points, num_bases, 141}, v_colors.options());
     if (method == "poly") {
         compute_sh_backward_kernel<SHType::Poly><<<
             (num_points + N_THREADS - 1) / N_THREADS,
