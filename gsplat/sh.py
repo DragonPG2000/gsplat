@@ -94,6 +94,7 @@ class _SphericalHarmonics(Function):
         method = ctx.method
         viewdirs = ctx.saved_tensors[0]
         num_points = v_colors.shape[0]
+        print(f"v_colors shape is {v_colors.shape}")
         return (
             None,
             None,
