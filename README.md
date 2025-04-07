@@ -36,7 +36,7 @@ pip install gsplat
 Or install from source. In this way it will build the CUDA code during installation.
 
 ```bash
-pip install git+https://github.com/nerfstudio-project/gsplat.git
+pip install git+https://github.com/DragonPG2000/gsplat.git
 ```
 
 ## Examples
